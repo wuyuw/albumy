@@ -70,9 +70,8 @@ class BaseConfig:
 
 
 class DevelopmentConfig(BaseConfig):
-    SQLALCHEMY_DATABASE_URI = \
-        prefix + os.path.join(basedir, 'data-dev.db')
-    REDIS_URL = "redis://localhost"
+    SQLALCHEMY_DATABASE_URI = 'mysql+pymysql://root:123456@192.168.56.11/albumy'
+    REDIS_URL = "redis://192.168.56.11"
 
 
 class TestingConfig(BaseConfig):
